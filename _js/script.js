@@ -31,6 +31,22 @@ function changeHeaderWhenScroll() {
   }
 }
 
+/* Depoimentos */
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 3,
+      setWrapperSize: true
+    }
+  }
+})
+
 /* Botão voltar para o topo */
 const backToTopButton = document.querySelector('.back-to-top')
 
@@ -66,7 +82,6 @@ function activateMenuAtCurrentSection() {
     }
   }
 }
-
 
 /* When Scroll */
 window.addEventListener('scroll', function () {
