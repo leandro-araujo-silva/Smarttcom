@@ -325,6 +325,20 @@ section.descricao-socios .contador {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+section.descricao-socios .time {
+  position: absolute;
+  top: 0.8rem;
+  left: .1rem;
+}
+
+section.descricao-socios .time h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: black;
+  font-style: italic;
 }
 
 .img-slider {
@@ -347,11 +361,42 @@ section.descricao-socios .contador {
   transition-property: clip-path;
 }
 
-.img-slider .slide img {
-  z-index: 1;
-  width: 100%;
-  border-radius: 5px;
+.img-slider .slide.one,
+.img-slider .slide.two {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.img-slider .content {
+  max-width: 27rem;
+}
+
+.img-slider .content h4 {
+  margin-bottom: 2rem;
+}
+
+.img-slider .content p {
+  font-size: 1.1rem;
+}
+
+.img-slider .slide.one .image img {
+  width: 18rem;
+  height: 1rem;
+  border-radius: 80%;
+}
+
+.img-slider .slide.two .image img {
+  width: 18rem;
+  height: 1rem;
+  border-radius: 65%;
+  /*
+  object-fit: scale-down;
+  clip-path: circle();
+  */
+}
+
+/*----------------*/
 
 .img-slider .navigation {
   z-index: 2;
@@ -404,7 +449,7 @@ section.descricao-socios .contador {
 
 .card img {
   transition: 0.3s;
-  border: .1rem solid transparent; /* Adicionei */
+  border: 0.1rem solid transparent; /* Adicionei */
 }
 
 .card img:hover {
@@ -619,7 +664,7 @@ footer.two .dev h4 {
     padding: 10rem 0;
   }
 
-  .section header, 
+  .section header,
   #testimonials header {
     max-width: 32rem;
     text-align: center;
@@ -771,7 +816,7 @@ footer.two .dev h4 {
   /* Carrossel */
   .img-slider {
     width: 600px;
-    height: 375px;
+    height: 475px;
   }
 
   .img-slider .navigation {
@@ -786,9 +831,19 @@ footer.two .dev h4 {
 }
 
 @media (max-width: 620px) {
+  .img-slider .slide.one,
+  .img-slider .slide.two {
+    display: grid;
+    text-align: center;
+  }
+
   .img-slider {
     width: 400px;
-    height: 250px;
+    height: 750px;
+  }
+
+  .img-slider .slide .content {
+    order: 1;
   }
 
   .img-slider .navigation {
@@ -803,9 +858,18 @@ footer.two .dev h4 {
 }
 
 @media (max-width: 420px) {
+  .img-slider .slide.one .image img {
+    width: 90%;
+    height: 8rem;
+  }
+
+  .img-slider .slide.two .image img {
+    width: 90%;
+  }
+
   .img-slider {
     width: 320px;
-    height: 200px;
+    height: 790px;
   }
 
   .img-slider .navigation {
