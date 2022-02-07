@@ -589,6 +589,17 @@ section.descricao-socios .time h4 {
 
 /*==== Formulário de e-mail =============== */
 
+section#email .flexEmail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+section#email .form {
+  width: 50%;
+}
+
 section#email .form form {
   margin-top: 2rem;
 }
@@ -633,7 +644,7 @@ section form input[type=submit]{
   box-shadow: 0 8px 20px 0 rgba(224, 224, 224, 0.5);
   color: white;
   cursor: pointer;
-  margin: 10px auto;
+  margin: 10px 0px;
   border: 0;
   transition: 0.3s;
   text-transform: uppercase;
@@ -643,6 +654,9 @@ section form input[type=submit]:hover {
   background-color: var(--base-color-alt);
 }
 
+section#email .map iframe{
+  border-radius: 5%;
+}
 
 /*====  FOOTER ============================ */
 footer {
@@ -916,6 +930,25 @@ footer.two .dev h4 {
     width: 10px;
     height: 10px;
     margin: 8px;
+  }
+
+  /* E-mail */
+  section#email .flexEmail {
+    display: block;
+  }
+  
+  section#email .form {
+    width: 100%;
+  }
+
+  section form input[type=submit]{
+    margin: 10px auto;
+  }
+  
+  section#email .map iframe{
+    margin-top: 5rem;
+    border-radius: 5%;
+    width: 100%;
   }
 }
 
