@@ -20,7 +20,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - [HTML5]
 - [CSS3]
-- [Javascript]
+- [JavaScript]
 - [FormSubmit]
 - [Swiper JS]
 ---
